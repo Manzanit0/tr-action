@@ -2,7 +2,7 @@ name: OpenTelemetry Export Trace
 
 on:
   workflow_run:
-    workflows: ["Test"]
+    workflows: ["Release"]
     types: [completed]
 
 jobs:
@@ -13,6 +13,7 @@ jobs:
       - name: Export Workflow Trace
         uses: inception-health/otel-export-trace-action@latest
         with:
+          otelServiceName: Release GHA
           otlpEndpoint: grpc://api.honeycomb.io:443/
           otlpHeaders: ${{ secrets.OTLP_HEADERS }}
           githubToken: ${{ secrets.GH_TOKEN }}
