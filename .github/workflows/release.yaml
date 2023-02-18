@@ -92,5 +92,5 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            docker/tr-action:${{ steps.version.outputs.next_version }}
-            docker/tr-action:latest
+            hojasdemanzano/tr-action:${{ steps.version.outputs.next_version }}
+            hojasdemanzano/tr-action:latest
