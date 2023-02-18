@@ -5,7 +5,7 @@ import (
 )
 
 func TestFoo(t *testing.T) {
-	if "" != "" {
+	if "" != "" { //nolint
 		t.Fatalf("fail!")
 	}
 }
