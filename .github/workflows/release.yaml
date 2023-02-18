@@ -59,6 +59,7 @@ jobs:
         with:
           # Needed to create git tag.
           token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
 
       - name: Get version
         id: get_version
